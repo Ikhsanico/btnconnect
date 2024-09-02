@@ -22,7 +22,7 @@ import CustomInput from './CustomInput';
 import { authFormSchema } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { signIn, signUp } from '@/lib/actions/user.actions';
+import { getLoggedInUser, signIn, signUp } from '@/lib/actions/user.actions';
 
 
 const AuthForm = ({type}: {type: string}) => {
@@ -44,7 +44,7 @@ const AuthForm = ({type}: {type: string}) => {
  
   // 2. Define a submit handler.
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-      setIsloading(false)
+      setIsloading(true)
       console.log('test');
       
       try {
@@ -54,20 +54,24 @@ const AuthForm = ({type}: {type: string}) => {
            setUser(newUser)
         }
         if (type === 'sign-in') {
-            // const response = await signIn({
-            //     email: data.email,
-            //     password : data.password
-            // })
-            // if (response) router.push('/')
+            const response = await signIn({
+                email: data.email,
+                password : data.password
+            })
+            if (response) router.push('/')
         }
       } catch (error) {
         console.log(error);
       } finally {
-        setIsloading(true);
-      }
+        setIsloading(false);
+      }  
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
   }
+    useEffect(() => {
+        console.log(form.formState.errors)
+      }, [form.formState.errors])
+      
   return (
     <section className='auth-form'>
         <header className='flex flex-col gap-5 md:gap-8'>

@@ -197,7 +197,7 @@ export const getTransactionStatus = (date: Date) => {
 
 export const authFormSchema = (type : String) => z.object({
   // Sign up//
-  username: type === 'sign-in' ? z.string().optional() : z.string().min(8),
+  // username: type === 'sign-in' ? z.string().optional() : z.string().min(8),
   firstName:type === 'sign-in' ? z.string().optional() : z.string().min(3),
   lastName:type === 'sign-in' ? z.string().optional() : z.string().min(3),
   address1:type === 'sign-in' ? z.string().optional() : z.string().max(50),
