@@ -55,7 +55,7 @@ export const ITEMS = [
 ];
 
 export const topCategoryStyles = {
-  "Food and Drink": {
+  "Food and Dining": {
     bg: "bg-blue-25",
     circleBg: "bg-blue-100",
     text: {
@@ -103,7 +103,7 @@ export const transactionCategoryStyles = {
     textColor: "text-pink-700",
     chipBackgroundColor: "bg-inherit",
   },
-  Payment: {
+  Deposit: {
     borderColor: "border-success-600",
     backgroundColor: "bg-green-600",
     textColor: "text-success-700",
@@ -123,15 +123,39 @@ export const transactionCategoryStyles = {
   },
   Processing: {
     borderColor: "border-[#F2F4F7]",
-    backgroundColor: "bg-gray-500",
-    textColor: "text-[#344054]",
-    chipBackgroundColor: "bg-[#F2F4F7]",
+    backgroundColor: "bg-[#FDAE03]",
+    textColor: "text-[#FDAE03]",
+    chipBackgroundColor: "bg-[#FFF2DD]",
   },
   Success: {
     borderColor: "border-[#12B76A]",
     backgroundColor: "bg-[#12B76A]",
     textColor: "text-[#027A48]",
     chipBackgroundColor: "bg-[#ECFDF3]",
+  },
+  Declined: {
+    borderColor: "border-[#FF3B30]",
+    backgroundColor: "bg-[#FF3B30]",
+    textColor: "text-[#B42318]",
+    chipBackgroundColor: "bg-[#FEF3F2]",
+  },
+  Subscriptions: {
+    borderColor: "border-[#1570EF]",
+    backgroundColor: "bg-[#1570EF]",
+    textColor: "text-[#175CD3]",
+    chipBackgroundColor: "bg-inherit",
+  },
+  Travel: {
+    borderColor: "border-[#1570EF]",
+    backgroundColor: "bg-[#1570EF]",
+    textColor: "text-[#175CD3]",
+    chipBackgroundColor: "bg-inherit",
+  },
+  Payment: {
+    borderColor: "border-[#FDAE03]",
+    backgroundColor: "bg-[#FDAE03]",
+    textColor: "text-[#FDA303]",
+    chipBackgroundColor: "bg-inherit"
   },
   default: {
     borderColor: "",
